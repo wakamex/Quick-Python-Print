@@ -1,5 +1,15 @@
 # Quick Python Printf
 
+## Installation
+
+Several places to install this from:
+- [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=MihaiCosma.quick-python-printf)
+- Search "Quick-Python-Printf" in the plugin tab of Visual Studio Code.
+
+works on vscode version ≥ 1.57.0.
+
+## Motivation
+
 This extension is inspired by "[Quick Python Print](https://github.com/wwdok/Quick-Python-Print)". 
 
 The only differnece is this extension uses `print(f"{variable=}")` instead of `print("variable",variable)`.
@@ -16,14 +26,6 @@ The only differnece is this extension uses `print(f"{variable=}")` instead of `p
 * Able to output colored text in terminal by using python built-in package: `termcolor`.
 
 If you find bug or have feature request, you can check out the ChangeLog to see if this bug or feature had been fixed or added in latest version, if not, please issue it in this extension's [github repo](https://github.com/wakamex/Quick-Python-Print).
-
-## Installation
-
-Before installation, make sure your vscode version ≥ 1.57.0.
-
-Several places to install this from:
-- [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=MihaiCosma.quick-python-printf)
-- Search "Quick-Python-Printf" in the plugin tab of Visual Studio Code.
 
 ## How to use
 
