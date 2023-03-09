@@ -20,7 +20,10 @@ If you find bug or have feature request, you can check out the ChangeLog to see 
 ## Installation
 
 Before installation, make sure your vscode version ≥ 1.57.0.
-This extension is available in the Visual Studio Code Extension Marketplace, you can search "Quick-Python-Printf" and install it.
+
+Several places to install this from:
+- [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=MihaiCosma.quick-python-printf)
+- Search "Quick-Python-Printf" in the plugin tab of Visual Studio Code.
 
 ## How to use
 
