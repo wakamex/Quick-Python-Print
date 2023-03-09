@@ -5,9 +5,9 @@ function getInsertCode(mode:number, variableName:string, prefix:string, suffix:s
     let codeToInsert = '';
     if (mode === 0) {
         if(color) {
-            codeToInsert = `print(colored("${prefix}${variableName}${attr}${suffix}", "${color}"), ${variableName}${attr})`;
+            codeToInsert = `print(colored(f"${prefix}{${variableName}${attr}${suffix}=}", "${color}"))`;
         } else {
-            codeToInsert = `print("${prefix}${variableName}${attr}${suffix}", ${variableName}${attr})`;
+            codeToInsert = `print(f"${prefix}{${variableName}${attr}${suffix}=}")`;
         }
     } else if (mode === 1) {
         if(color) {
