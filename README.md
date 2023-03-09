@@ -1,7 +1,10 @@
-# Quick Python Print
+# Quick Python Printf
 
-## Intro 
-This extension is inspired by "[Python Quick Print](https://github.com/AhadCove/Python-Quick-Print)". "Python Quick Print" can quickly print out variables on the console by using shortcut `Ctrl+Shift+L`, while "Quick Python Print" enhances some features:
+This extension is inspired by "[Quick Python Print](https://github.com/wwdok/Quick-Python-Print)". 
+
+The only differnece is this extension uses `print(f"{variable=}")` instead of `print("variable",variable)`.
+
+"Quick Quick Print" can quickly print out variables on the console by using shortcut `Ctrl+Shift+L`, while "Quick Python Print" enhances some features:
 * You can put the cursor at target line, the extension will automatically recognize the variable in the line.
 * If did not recognize any variable in current line, it will just insert simply `print()` and move the cursor inside the bracket.
 * Press `Ctrl+Shift+O` to print out tensor shape by default, e.g. `print("==>> a.shape: ", a.shape)`.
@@ -12,16 +15,12 @@ This extension is inspired by "[Python Quick Print](https://github.com/AhadCove/
 * Allow user to define customized prefix and suffix of print content flexibly in extension settings.
 * Able to output colored text in terminal by using python built-in package: `termcolor`.
 
-If you find bug or have feature request, you can check out the ChangeLog to see if this bug or feature had been fixed or added in latest version, if not, please issue it in this extension's [github repo](https://github.com/wwdok/Quick-Python-Print).
-
-## Motivation
-
-When I am learning deep learning model, I often want to know how the tensor shape changes along the way, I think this will help me understand how the deep learning model works. Take pytorh for example, these operations `view，slice，concat，permute，conv，linear` etc all will change the tensor shape. Fortunately, many deep learning framework all have `.shape` attribute of tensor(as far as I know, there are pytorch, numpy, tensorflow, paddlepaddle, oneflow), so this makes the extension be useful for different deep learning framework users. Afterwards, I add more features to make it also useful for other python developers.
+If you find bug or have feature request, you can check out the ChangeLog to see if this bug or feature had been fixed or added in latest version, if not, please issue it in this extension's [github repo](https://github.com/wakamex/Quick-Python-Print).
 
 ## Installation
 
 Before installation, make sure your vscode version ≥ 1.57.0.
-This extension is available in the Visual Studio Code Extension Marketplace, you can search "Quick-Python-Print" and install it.
+This extension is available in the Visual Studio Code Extension Marketplace, you can search "Quick-Python-Printf" and install it.
 
 ## How to use
 
@@ -126,17 +125,6 @@ a = torch.tensor([[1.0, 2.0, 3.0],
                 [4.0, 5.0, 6.0]])
 ```
 You can use `Alt + down` to move down the inserted print statement.
-
-## Warning
-This uses Python 3 syntax,If you're using Python 2 print isn't a function.You can import this behavior from `__future__`:
-`from __future__ import print_function`
-
-## Donation
-If you find this extension can help you save time, and willing to donate me, i would be very grateful ! ❤
-
-🥤[Buy me a Coca-Cola](https://ko-fi.com/weidawang) 
-
-![](images/donation.png)
 
 ## License
 MIT License
