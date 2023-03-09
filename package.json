@@ -1,15 +1,15 @@
 {
-	"name": "quick-python-print",
-    "displayName": "Quick-Python-Print",
+    "name": "quick-python-print",
+    "displayName": "Quick-Python-Printf",
     "description": "Quickly handle print operations : Insertion(include print out variable, variable type, tensor shape etc), (Un)comment, Delete by using shortcuts",
     "version": "0.1.9",
-    "publisher": "WeidaWang",
+    "publisher": "MihaiCosma",
     "author": {
-        "name": "Weida Wang"
+        "name": "Mihai Cosma"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/wwdok/Quick-Python-Print"
+        "url": "https://github.com/wakamex/Quick-Python-Print"
     },
     "icon": "images/icon-128.png",
     "engines": {
