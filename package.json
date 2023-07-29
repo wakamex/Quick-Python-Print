@@ -2,7 +2,7 @@
     "name": "quick-python-printf",
     "displayName": "Quick-Python-Printf",
     "description": "Quickly handle print operations : Insertion(include print out variable, variable type, tensor shape etc), (Un)comment, Delete by using shortcuts",
-    "version": "0.1.9",
+    "version": "2000",
     "publisher": "MihaiCosma",
     "author": {
         "name": "Mihai Cosma"
