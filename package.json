@@ -24,11 +24,8 @@
     "keywords": [
         "python",
         "print",
-        "tensor",
-        "pytorch",
-        "tensoflow",
-        "paddlepaddle",
-        "numpy"
+        "printf",
+        "debug"
     ],
     "activationEvents": [
         "onLanguage:python",
