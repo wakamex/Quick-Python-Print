@@ -2,7 +2,7 @@
     "name": "quick-python-printf",
     "displayName": "Quick-Python-Printf",
     "description": "Quickly handle print operations : Insertion(include print out variable, variable type, tensor shape etc), (Un)comment, Delete by using shortcuts",
-    "version": "2000",
+    "version": "2000.0.0",
     "publisher": "MihaiCosma",
     "author": {
         "name": "Mihai Cosma"
@@ -28,8 +28,7 @@
         "debug"
     ],
     "activationEvents": [
-        "onLanguage:python",
-        "onCommand:extension.python-print"
+        "onLanguage:python"
     ],
     "main": "./out/extension.js",
     "contributes": {
@@ -47,61 +46,55 @@
         ],
         "commands": [
             {
-                "command": "extension.python-print",
-                "title": "Print variable purely"
+                "command": "extension.python-printf1",
+                "title": "Printf1"
             },
             {
-                "command": "extension.python-print-tensor-shape",
-                "title": "Print (Pytorch, TensorFlow, PaddlePaddle, Numpy) tensor shape by default"
+                "command": "extension.python-printf2",
+                "title": "Printf2"
             },
             {
-                "command": "extension.python-print-function",
-                "title": "Print type of variable by default"
+                "command": "extension.python-printf3",
+                "title": "Printf3"
             },
             {
-                "command": "extension.python-print-commentall",
-                "title": "Comment out all print statements in the scope"
+                "command": "extension.python-printf4",
+                "title": "Printf4"
             },
             {
-                "command": "extension.python-print-commentup",
-                "title": "Comment out all print statements above the cursor"
-            },
-            {
-                "command": "extension.python-print-commentdown",
-                "title": "Comment out all print statements below the cursor"
-            },
-            {
-                "command": "extension.python-print-deleteall",
-                "title": "Delete all print statements in the scope"
-            },
-            {
-                "command": "extension.python-print-delimiter",
-                "title": "Add delimiter line"
+                "command": "extension.python-printf5",
+                "title": "Printf5"
             }
         ],
         "keybindings": [
             {
-                "command": "extension.python-print",
+                "command": "extension.python-printf1",
                 "key": "ctrl+shift+l",
                 "mac": "cmd+shift+l",
                 "when": "editorTextFocus"
             },
             {
-                "command": "extension.python-print-tensor-shape",
-                "key": "ctrl+shift+o",
-                "mac": "cmd+shift+o",
+                "command": "extension.python-printf2",
+                "key": "ctrl+shift+;",
+                "mac": "cmd+shift+;",
                 "when": "editorTextFocus"
             },
             {
-                "command": "extension.python-print-function",
-                "key": "ctrl+shift+t",
-                "mac": "cmd+shift+t",
+                "command": "extension.python-printf3",
+                "key": "ctrl+shift+'",
+                "mac": "cmd+shift+'",
                 "when": "editorTextFocus"
             },
             {
-                "command": "extension.python-print-commentall",
+                "command": "extension.python-printf4",
+                "key": "",
+                "mac": "",
+                "when": "editorTextFocus"
+            },
+            {
+                "command": "extension.python-printf5",
                 "key": "ctrl+shift+/",
-                "mac": "cmd+shift+/",
+                "mac": "ctrl+shift+/",
                 "when": "editorTextFocus"
             },
             {
@@ -118,116 +111,34 @@
             },
             {
                 "command": "extension.python-print-deleteall",
-                "key": "ctrl+shift+r",
-                "mac": "cmd+shift+r",
-                "when": "editorTextFocus"
-            },
-            {
-                "command": "extension.python-print-delimiter",
-                "key": "ctrl+shift+;",
-                "mac": "cmd+shift+;",
+                "key": "ctrl+shift+alt+/",
+                "mac": "cmd+shift+alt+/",
                 "when": "editorTextFocus"
             }
         ],
         "configuration": {
             "type": "object",
-            "title": "print configuration",
+            "title": "QPP: Quick Python Print",
             "properties": {
-                "1.1.prefix": {
+                "customFString1": {
                     "type": "string",
-                    "default": "==>> ",
-                    "description": "prefix before the variable name"
+                    "default": "f\"{variable=}\""
                 },
-                "1.2.suffix": {
+                "customFString2": {
                     "type": "string",
-                    "default": ": ",
-                    "description": "suffix after the variable name, e.g. :\\n"
+                    "default": "f\"{len(variable)=}\""
                 },
-                "2.attribute1": {
+                "customFString3": {
                     "type": "string",
-                    "default": "",
-                    "description": "variable attribute for Ctrl+Shift+L shortcut"
+                    "default": "f\"{type(variable)=}\""
                 },
-                "3.attribute2": {
+                "customFString4": {
                     "type": "string",
-                    "default": ".shape",
-                    "description": "variable attribute for Ctrl+Shift+O shortcut"
+                    "default": "f\"{variable.shape=}\""
                 },
-                "4.function": {
+                "customFString5": {
                     "type": "string",
-                    "default": "type",
-                    "description": "funtion that can pass in variable for Ctrl+Shift+T shortcut"
-                },
-                "5.1.enable colored output text": {
-                    "type": "boolean",
-                    "default": false,
-                    "description": "whether to enable color output text."
-                },
-                "5.2.color for ctrl shift l": {
-                    "type": "string",
-                    "default": "green",
-                    "description": "color of output text for Ctrl+Shift+L shortcut",
-                    "enum": [
-                        "red",
-                        "green",
-                        "yellow",
-                        "blue",
-                        "magenta",
-                        "cyan",
-                        "white"
-                    ]
-                },
-                "5.3.color for ctrl shift o": {
-                    "type": "string",
-                    "default": "yellow",
-                    "description": "color of output text for Ctrl+Shift+O shortcut",
-                    "enum": [
-                        "red",
-                        "green",
-                        "yellow",
-                        "blue",
-                        "magenta",
-                        "cyan",
-                        "white"
-                    ]
-                },
-                "5.4.color for ctrl shift t": {
-                    "type": "string",
-                    "default": "blue",
-                    "description": "color of output text for Ctrl+Shift+T shortcut",
-                    "enum": [
-                        "red",
-                        "green",
-                        "yellow",
-                        "blue",
-                        "magenta",
-                        "cyan",
-                        "white"
-                    ]
-                },
-                "6.1.delimiter symbol for ctrl shift ;": {
-                    "type": "string",
-                    "default": "-",
-                    "description": "delimiter symbol for Ctrl+Shift+; shortcut"
-                },
-                "6.2.delimiter length for ctrl shift ;": {
-                    "type": "number",
-                    "default": 50,
-                    "description": "number of delimiter symbol for Ctrl+Shift+; shortcut"
-                },
-                "6.3.delimiter color for ctrl shift ;": {
-                    "type": "string",
-                    "default": "white",
-                    "description": "color of output text for Ctrl+Shift+; shortcut",
-                    "enum": [
-                        "red",
-                        "green",
-                        "yellow",
-                        "blue",
-                        "magenta",
-                        "cyan",
-                        "white"
-                    ]
+                    "default": "''.join(['=']*50)"
                 }
             }
         }
