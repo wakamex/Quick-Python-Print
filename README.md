@@ -1,6 +1,6 @@
 # Quick Python Printf
 
-<img src=./images/Cover.png height=300 width=300 alt="Quick Python Printf Cover Image">
+<img src="https://github.com/wakamex/Quick-Python-Print/blob/main/images/Cover.png?raw=true" height=300 width=300 alt="Quick Python Printf Cover Image">
 
 ## Installation
 
