@@ -13,7 +13,7 @@ async function handleInsertion(customFString: string) {
     const currentLineText = editor.document.lineAt(editor.selection.start.line).text;
     await editor.edit(editBuilder => {
         for (const variableName of !customFString.match("variable") ? [''] : editor.selection.isEmpty ? getVariableNames(editor.selection, currentLineText) : [editor.document.getText(editor.selection)]) {
-            editBuilder.insert((currentLineText.trim() ? new vscode.Position(editor.selection.end.line, editor.document.lineAt(editor.selection.end.line).text.length) : editor.selection.end), (currentLineText.trim() ? '\n' : '') + `print(${customFString.replace('variable', variableName)})`);
+            editBuilder.insert((currentLineText.trim() ? new vscode.Position(editor.selection.end.line, editor.document.lineAt(editor.selection.end.line).text.length) : editor.selection.end), (currentLineText.trim() ? '\n' : '') + `${vscode.workspace.getConfiguration().get('printFunction')}(${customFString.replace('variable', variableName)})`);
         }
     });
 }

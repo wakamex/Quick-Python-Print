@@ -139,6 +139,10 @@
                 "customFString5": {
                     "type": "string",
                     "default": "''.join(['=']*50)"
+                },
+                "printFunction": {
+                    "type": "string",
+                    "default": "print"
                 }
             }
         }
